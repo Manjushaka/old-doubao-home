@@ -1,27 +1,44 @@
-  import _ from 'lodash';
-  import React from 'react';
+import React from 'react';
+import ReactDOM from 'react-dom';
 
-//   import './style.css';
-//   import './style1.css';
-//  import './AssetManagement/doubao.jpeg';
-import print from './print';
+function App() {
+  console.log('app');
+  return <div>first app with React</div>
+}
 
-  function component() {
-    var element = document.createElement('div');
-    var button = document.createElement('button');
-    var br = document.createElement('br');
+ReactDOM.render(<App />, document.querySelector('#root'));
 
-    button.innerHTML = 'Click me and look at the console.123456!';
-    element.innerHTML = _.join(['Hello', 'webpack'], ' ');
-    element.appendChild(br);
-    element.appendChild(button);
+//   import _ from 'lodash';
+//   import React from 'react';
 
-    button.onclick = print.bind(null, 'Hello')
+// //   import './style.css';
+// //   import './style1.css';
+// //  import './AssetManagement/doubao.jpeg';
+// import print from './print';
 
-    return element;
-  }
+//   function component() {
+//     var element = document.createElement('div');
+//     var button = document.createElement('button');
+//     var br = document.createElement('br');
 
-  document.body.appendChild(component());
+//     button.innerHTML = 'Click me and look at the console.123456!';
+//     element.innerHTML = _.join(['Hello', 'webpack'], ' ');
+//     element.appendChild(br);
+//     element.appendChild(button);
+
+//     button.onclick = print.bind(null, 'Hello')
+//     const p = new Promise((resolve) => {
+//         const {name} ={name: ' lily'}
+//         resolve('test promise' + name);
+//     })
+//     p.then((res) => {
+//         console.log(res)
+//     })
+
+//     return element;
+//   }
+
+//   document.body.appendChild(component());
 
 //   function getComponent() {
 //     return import(/* webpackChunkName: "lodash_dan" */ 'lodash').then(({ default: _ }) => {
